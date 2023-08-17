@@ -1,19 +1,11 @@
 #include <stdio.h>
-#include "main.h"
 /**
  * main - Entry point
  *
- * fizz_buzz - test
  *
  * Return: 0
  */
 int main(void)
-{
-	fizz_buzz();
-	return (0);
-}
-
-void fizz_buzz(void)
 {
 	int i;
 
@@ -31,4 +23,5 @@ void fizz_buzz(void)
 			printf(" ");
 	}
 	printf("\n");
+	return (0);
 }
