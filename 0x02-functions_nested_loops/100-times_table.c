@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "main.h"
 /**
  * print_times_table - n times table
@@ -26,9 +27,9 @@ void print_times_table(int n)
 				if (r >= 100)
 					k = (r / 10) % 10 + '0';
 				if (m == '0' && j != 0)
-					m = s;
+					m = ' ';
 				if (m == ' ' && k == '0' && j != 0)
-					k = s;
+					k = ' ';
 				if (j != 0)
 				{
 					_putchar(m);
@@ -37,11 +38,11 @@ void print_times_table(int n)
 				_putchar(l + '0');
 				if (j != n)
 				{
-					_putchar(co);
-					_putchar(s);
+					_putchar(',');
+					_putchar(' ');
 				}
 			}
-			_putchar('\n');
+			write(1, "\n", 1);
 		}
 	}
 }
