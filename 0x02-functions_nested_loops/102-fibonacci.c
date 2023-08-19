@@ -6,20 +6,21 @@
  */
 int main(void)
 {
-	int i, j, k, mem;
+	int i;
+	long long int j, k, mem;
 
 	j = 1;
 	k = 2;
-	printf("%d", j);
+	printf("%lld", j);
 	printf(",");
 	printf(" ");
-	printf("%d", k);
-	for (i = 1; i < 48; i++)
+	printf("%lld", k);
+	for (i = 1; i <= 48; i++)
 	{
 		printf(",");
 		printf(" ");
 		j = j + k;
-		printf("%d", j);
+		printf("%lld", j);
 		mem = k;
 		k = j;
 		j = mem;
