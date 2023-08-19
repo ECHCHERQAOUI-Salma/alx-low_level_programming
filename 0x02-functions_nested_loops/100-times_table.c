@@ -1,11 +1,11 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * print_times_table - n times table
+ * times_table - n times table
  *
  * @n: argument
  */
-void print_times_table(int n)
+void times_table(int n)
 {
 	int i, r, j;
 	int k;
