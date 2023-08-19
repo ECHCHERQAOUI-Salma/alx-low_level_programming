@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * times_table - n times table
+ * print_times_table - n times table
  *
  * @n: argument
  */
@@ -12,7 +12,7 @@ void print_times_table(int n)
 	int l;
 	int m;
 
-	if (n > 0 && n < 15)
+	if (n >= 0 && n =< 15)
 	{
 		for (i = 0; i <= n; i++)
 		{
