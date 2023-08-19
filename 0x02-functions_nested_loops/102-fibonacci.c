@@ -7,20 +7,20 @@
 int main(void)
 {
 	int i;
-	long long int j, k, mem;
+	unsigned long int j, k, mem;
 
 	j = 1;
 	k = 2;
-	printf("%lld", j);
+	printf("%ld", j);
 	printf(",");
 	printf(" ");
-	printf("%lld", k);
+	printf("%ld", k);
 	for (i = 1; i <= 48; i++)
 	{
 		printf(",");
 		printf(" ");
 		j = j + k;
-		printf("%lld", j);
+		printf("%ld", j);
 		mem = k;
 		k = j;
 		j = mem;
