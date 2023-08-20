@@ -7,35 +7,31 @@
  */
 int main(void)
 {
-	int i, l;
-	unsigned long int j, k, mem;
+	int i;
+	unsigned long int bef, aft, bef1, bef2, aft1, aft2, m = 1000000000;
 
-	j = 1;
-	k = 2;
-	printf("%lu", j);
-	printf(",");
-	printf(" ");
-	printf("%lu", k);
-	for (i = 1; i <= 96; i++)
+	bef = 1;
+	aft = 2;
+	printf("%lu, %lu", bef, aft);
+	for (i = 1; i <= 90; i++)
 	{
-		printf(",");
-		printf(" ");
-		j = j + k;
-		while (j > ULONG_MAX)
-		{
-			l = l * 10 + j % 10;
-			j = j / 10;
-		}
-		printf("%lu", j);
-		while (l != 0)
-		{
-			j = j * 10 + (l % 10);
-			printf("%d", l % 10);
-			l = l / 10;
-		}
-		mem = k;
-		k = j;
-		j = mem;
+		aft = aft + bef;
+		bef = aft - bef;
+		printf(", %lu", aft);
+	}
+	aft1 = aft / m;
+	aft2 = aft % m;
+	bef1 = bef / m ;
+	bef2 = bef % m;
+	printf("%d", i);
+	for (i = 91; i <= 96; i++)
+	{
+		aft1 = aft1 + bef1;
+		bef1 = aft1 - bef1;
+		aft2 = aft2 + bef2;
+		bef2 = aft2 - bef2;
+		printf(", %lu", aft1 + (aft2 / m));
+		printf("%lu", aft2 % m);
 	}
 	printf("\n");
 	return (0);
