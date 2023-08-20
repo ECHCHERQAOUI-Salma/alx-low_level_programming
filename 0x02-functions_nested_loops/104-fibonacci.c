@@ -23,7 +23,6 @@ int main(void)
 	aft2 = aft % m;
 	bef1 = bef / m;
 	bef2 = bef % m;
-	printf("%d", i);
 	for (i = 91; i <= 96; i++)
 	{
 		aft1 = aft1 + bef1;
