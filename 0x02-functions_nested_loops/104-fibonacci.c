@@ -21,7 +21,7 @@ int main(void)
 	}
 	aft1 = aft / m;
 	aft2 = aft % m;
-	bef1 = bef / m ;
+	bef1 = bef / m;
 	bef2 = bef % m;
 	printf("%d", i);
 	for (i = 91; i <= 96; i++)
