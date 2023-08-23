@@ -9,7 +9,8 @@
 int _atoi(char *s)
 {
 	int i, c = 0;
-	int j = 0;
+	unsigned int j = 0;
+	int k;
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
@@ -24,6 +25,9 @@ int _atoi(char *s)
 		return (0);
 	if (c % 2 == 0)
 		return (j);
-	else
-		return (-j);
+	if (c % 2 != 0)
+	{
+		k = -j;
+		return (k);
+	}
 }
