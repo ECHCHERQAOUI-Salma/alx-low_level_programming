@@ -20,7 +20,7 @@ char *_strncat(char *dest, char *src, int n)
 		c1++;
 	for (i = c; i < c + n; i++)
 	{
-		if (n <= c + c1 + 1)
+		if (n <= c + c1)
 		{
 			*(dest + i) = *(src + j);
 			j++;
