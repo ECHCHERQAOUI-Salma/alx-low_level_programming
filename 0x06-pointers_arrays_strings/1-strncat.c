@@ -28,5 +28,9 @@ char *_strncat(char *dest, char *src, int n)
 		else
 			break;
 	}
+	if (n == 0)
+	{
+		*(dest + c) = '\0';
+	}
 	return (dest);
 }
