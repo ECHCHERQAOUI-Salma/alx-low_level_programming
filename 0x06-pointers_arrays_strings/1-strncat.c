@@ -20,13 +20,13 @@ char *_strncat(char *dest, char *src, int n)
 		c1++;
 	for (i = c; i < c + n; i++)
 	{
-		if (n > c + c1)
-			break;
-		else
+		if (n <= c + c1 + 1)
 		{
-			*(dest + i) = *(src + j);
-			j++;
-		}
+                        *(dest + i) = *(src + j);
+                        j++;
+                }
+		else
+			break;
 	}
 	return (dest);
 }
