@@ -3,7 +3,7 @@
  * _strncat - concat two strings
  *
  * @dest: destination
- *
+11;rgb:0000/0000/0000*
  * @src: source
  *
  * @n: number of characters
@@ -12,14 +12,21 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, c = 0, j = 0;
+	int i, c = 0, c1 = 0, j = 0;
 
 	for (i = 0; *(dest + i) != '\0'; i++)
 		c++;
+	for (i = 0; *(src + i) != '\0' ; i++)
+		c1++;
 	for (i = c; i < c + n; i++)
 	{
-		*(dest + i) = *(src + j);
-		j++;
+		if (n > c + c1)
+			break;
+		else
+		{
+			*(dest + i) = *(src + j);
+			j++;
+		}
 	}
 	return (dest);
 }
