@@ -18,19 +18,11 @@ char *_strncat(char *dest, char *src, int n)
 		c++;
 	for (i = 0; *(src + i) != '\0' ; i++)
 		c1++;
-	for (i = c; i < c + n; i++)
+	for (i = c; i < c + n && n <= c1; i++)
 	{
-		if (n <= c + c1)
-		{
-			*(dest + i) = *(src + j);
-			j++;
-		}
-		else
-			break;
+		*(dest + i) = *(src + j);
+		j++;
 	}
-	if (n == 0)
-	{
-		*(dest + c) = '\0';
-	}
+	*(dest + i) = '\0';
 	return (dest);
 }
