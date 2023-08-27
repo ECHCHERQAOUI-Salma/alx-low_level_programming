@@ -22,9 +22,9 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		if (n <= c + c1 + 1)
 		{
-                        *(dest + i) = *(src + j);
-                        j++;
-                }
+			*(dest + i) = *(src + j);
+			j++;
+		}
 		else
 			break;
 	}
