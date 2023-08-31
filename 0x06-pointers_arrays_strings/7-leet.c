@@ -2,23 +2,26 @@
  * leet - to 1337
  *
  * @str: string
+ *
+ * Return: pointer
  */
 char *leet(char *str)
 {
-	int i;
+	int i, j;
+	char a1[] = {'a', 'e', 'o', 't', 'l'};
+	char a2[] = {'A', 'E', 'O', 'T', 'L'};
+	int a3[] = {4, 3, 0, 7, 1};
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == 97 || str[i] == 65)
-			str[i] = 52;
-		else if (str[i] == 69 || str[i] == 101)
-			str[i] = 51;
-		else if (str[i] == 79 || str[i] == 111)
-			str[i] = 48;
-		else if (str[i] == 84 || str[i] == 116)
-			str[i] = 55;
-		else if (str[i] == 76|| str[i] == 108)
-			str[i] = 49;
+		for (j = 0; j < 5; j++)
+		{
+			if (str[i] == a1[j] || str[i] == a2[j])
+			{
+				str[i] = a3[j] + '0';
+				break;
+			}
+		}
 	}
 	return (str);
 }
