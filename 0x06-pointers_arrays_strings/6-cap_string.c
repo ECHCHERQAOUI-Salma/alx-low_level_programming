@@ -1,5 +1,5 @@
 /**
-11;rgb:0000/0000/0000* cap_string - capitalize words
+ * cap_string - capitalize words
  *
  * @str: string
  *
