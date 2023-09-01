@@ -1,5 +1,5 @@
 /**
-0;276;0c * _strspn - count characters from accept in string
+ * _strspn - count characters from accept in string
  *
  * @s: string
  *
