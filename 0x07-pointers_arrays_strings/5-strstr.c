@@ -1,9 +1,11 @@
 /**
- * _strst - find whole string in string
+ * _strstr - find whole string in string
  *
  * @haystack: original string
  *
  * @needle: found string
+ *
+ * Return: pointer
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -22,6 +24,7 @@ char *_strstr(char *haystack, char *needle)
 			}
 			else
 			{
+				needle = needle - c;
 				c = 0;
 				break;
 			}
