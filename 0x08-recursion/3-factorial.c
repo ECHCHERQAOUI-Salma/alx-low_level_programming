@@ -2,6 +2,8 @@
  * factorial - calculate factrial
  *
  * @n: number
+ *
+ * Return: int
  */
 int factorial(int n)
 {
