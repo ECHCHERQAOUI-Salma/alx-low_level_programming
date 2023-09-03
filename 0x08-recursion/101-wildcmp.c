@@ -1,17 +1,28 @@
+/**
+ * cmp - compare
+ *
+ * @c: check
+ *
+ * @s1: string
+ *
+ * @s2: string
+ *
+ * Return: int
+ */
 int cmp(int c, char *s1, char *s2)
 {
 	if (*s2 != '\0')
 	{
 		if (*s1 == '\0')
-                {
-                        if (*s2 == '*')
-                                s2++;
+		{
+			if (*s2 == '*')
+				s2++;
 			else
-                        {
+			{
 				c = 0;
 				return (c);
-                        }
-                }
+			}
+		}
 		else if (*s2 == '*')
 		{
 			s2++;
@@ -39,7 +50,16 @@ int cmp(int c, char *s1, char *s2)
 		return (c);
 	return (cmp(1, s1, s2));
 }
+/**
+ * wildcmp - it says
+ *
+ * @s1: string
+ *
+ * @s2: string
+ *
+ * Return: int
+ */
 int wildcmp(char *s1, char *s2)
 {
-	return(cmp(1, s1, s2));
+	return (cmp(1, s1, s2));
 }
