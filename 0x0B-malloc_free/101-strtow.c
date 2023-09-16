@@ -3,24 +3,27 @@
 /**
  * count - count
  *
- * @str: pointer
+ * @s: pointer
  *
  * Return: int
  */
-int count(char *str)
+int count(char *s)
 {
-	int i, words = 0;
+	int flag, c, w;
 
-	for  (i = 0; str[i] != '\0'; i++)
+	flag = 0;
+	w = 0;
+	for  (c = 0; s[c] != '\0'; c++)
 	{
-		if (i != 0)
+		if (s[c] == ' ')
+			flag = 0;
+		else if (flag == 0)
 		{
-			if ((str[i] == ' ' && str[i - 1] != ' ') ||
-			    (str[i] != ' ' && str[i + 1] == '\0'))
-				words++;
+			flag = 1;
+			w++;
 		}
 	}
-	return (words);
+	return (w);
 }
 /**
  * strtow - strng to words
@@ -31,7 +34,7 @@ int count(char *str)
  */
 char **strtow(char *str)
 {
-	int words = 0, len = 0, i = 0, j = 0, c = 0, start, end;
+	int words, len = 0, i, k = 0, c = 0, start, end;
 	char **w, *tmp;
 
 	if (str == NULL || *str == '\0')
@@ -41,7 +44,7 @@ char **strtow(char *str)
 		return (0);
 	while (*(str + len))
 		len++;
-	w = malloc(8 * (c + 1));
+	w = (char **)malloc(8 * (c + 1));
 	if (w == NULL)
 		return (0);
 	for (i = 0; i <= len; i++)
@@ -51,20 +54,20 @@ char **strtow(char *str)
 			if (c)
 			{
 				end = i;
-				tmp = malloc(c + 1);
+				tmp = (char *)malloc(c + 1);
 				if (tmp == NULL)
 					return (0);
 				while (start < end)
 					*tmp++ = str[start++];
 				*tmp = '\0';
-				w[j] = tmp - c;
-				j++;
+				w[k] = tmp - c;
+				k++;
 				c = 0;
 			}
 		}
 		else if (c++ == 0)
 			start = i;
 	}
-	w[j] = NULL;
+	w[k] = NULL;
 	return (w);
 }
