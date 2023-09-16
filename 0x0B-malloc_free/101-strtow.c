@@ -36,7 +36,7 @@ char **strtow(char *str)
 
 	if (str == NULL || *str == '\0')
 		return (0);
-	words = count(*str);
+	words = count(str);
 	if (words == 0)
 		return (0);
 	while (*(str + len))
