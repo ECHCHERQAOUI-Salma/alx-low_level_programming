@@ -44,7 +44,7 @@ char **strtow(char *str)
 		return (0);
 	while (*(str + len))
 		len++;
-	w = (char **)malloc(8 * (c + 1));
+	w = (char **)malloc(sizeof(char *) * (words + 1));
 	if (w == NULL)
 		return (0);
 	for (i = 0; i <= len; i++)
@@ -54,7 +54,7 @@ char **strtow(char *str)
 			if (c)
 			{
 				end = i;
-				tmp = (char *)malloc(c + 1);
+				tmp = (char *)malloc(sizeof(char) * (c + 1));
 				if (tmp == NULL)
 					return (0);
 				while (start < end)
