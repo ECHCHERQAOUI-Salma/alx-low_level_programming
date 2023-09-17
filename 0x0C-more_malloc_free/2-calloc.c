@@ -1,6 +1,13 @@
 #include "main.h"
 #include <stdlib.h>
-char* _memset(char*p, char c, unsigned int n)
+/**
+ * _memset - set memory
+ * @p: pointer
+ * @c: char
+ * @n: total size
+ * Return: char*
+ */
+char *_memset(char *p, char c, unsigned int n)
 {
 	unsigned int i;
 
