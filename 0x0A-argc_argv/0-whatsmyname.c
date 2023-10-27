@@ -4,6 +4,7 @@
  * main - entry
  * @argc: count
  * @argv: vector
+ * Return: int
  */
 int main(int argc, char *argv[])
 {
