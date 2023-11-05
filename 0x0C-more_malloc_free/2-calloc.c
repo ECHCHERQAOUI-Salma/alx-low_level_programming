@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * _calloc - calloc
+ * _calloc - calloc memory
  * @nmemb: elts
  * @size: size
  * Return: void*
