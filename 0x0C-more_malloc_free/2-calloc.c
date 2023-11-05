@@ -17,6 +17,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (c == NULL)
 		return (0);
 	for (i = 0; i < size; i++)
-		((int *)c)[i] = '\0';
+		((char *)c)[i] = '0';
 	return (c);
 }
