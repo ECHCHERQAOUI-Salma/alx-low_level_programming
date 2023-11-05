@@ -1,5 +1,5 @@
 #include <stdlib.h>
-11;rgb:0000/0000/0000#include "main.h"
+#include "main.h"
 /**
  * string_nconcat - conacte strings
  * @s1: string1
