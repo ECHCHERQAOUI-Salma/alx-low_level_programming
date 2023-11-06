@@ -1,15 +1,4 @@
-#ifndef ABS
-#define ABS (x)
-/**
- * ABS - absolute value
- * @x: x
- * Return: int
- */
-int ABS(int x)
-{
-	if ((x) >= 0)
-		return (x);
-	else
-		return (-1 * (x));
-}
+#ifndef ABS_H
+#define ABS_H
+#define ABS(x) ((x) < 0 ? -1 * (x) : (x))
 #endif /* ABS(x) */
