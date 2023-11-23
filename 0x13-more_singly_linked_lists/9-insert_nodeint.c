@@ -25,8 +25,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 				next->next = *head;
 				next->n = n;
 				*head = next;
+				return (*head);
 			}
-			if (i == idx - i)
+			else if (i == idx - i)
 			{
 				next = malloc(sizeof(listint_t));
 				replace = current->next;
