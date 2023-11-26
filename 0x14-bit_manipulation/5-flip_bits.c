@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "main.h"
-unsigned long int *flip( unsigned long int *n);
+unsigned long int *flip(unsigned long int *n);
 /**
  * flip_bits - flip
  * @n: n
@@ -25,6 +25,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 /**
  * flip - flip
  * @n: n
+ * Return: uln
  */
 unsigned long int *flip(unsigned long int *n)
 {
