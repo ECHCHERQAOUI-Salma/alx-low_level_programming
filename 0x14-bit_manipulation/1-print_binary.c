@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 	else
 		{
-			while (n > b && (b * 2) <= n)
+			while (n > b && (b * 2) <= n + 1)
 				b *= 2;
 			while (b >= 1)
 			{
