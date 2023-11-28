@@ -29,6 +29,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	c = fread(b, 1, letters, fp);
+	if (c < 0)
+	{
+		free(b);
+		fclose(fp);
+		return (0);
+	}
 	e = write(1, b, c);
 	free(b);
 	fclose(fp);
